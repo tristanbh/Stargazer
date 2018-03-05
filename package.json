@@ -1,0 +1,39 @@
+{
+  "name": "Stargazer",
+  "version": "1.0.0",
+  "description": "An express - sequelize - passport app to locate and schedule stargazing events",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oscill19/Boot-camp-Project-2"
+  },
+  "author": "Nikki Aaron, Aaron Brinkley, Tristan Benedict-Hall, Kevin Surmacewics",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oscill19/Boot-camp-Project-2/issues"
+  },
+  "homepage": "https://github.com/Oscill19/Boot-camp-Project-2#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "feedparser": "^2.2.9",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.2",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.83.0",
+    "sequelize": "^4.33.4",
+    "stargazing-time": "^1.0.0"
+  }
+}

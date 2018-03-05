@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include partials/head %>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Header Section -->
+    <div class="container">
+    <div class="row" id="headerSection">
+        <div class="col-sm-12 col-md-4 " id="pageLogo">
+            <h1>STARGAZER</h1>
+        </div>
+        <div class="col-sm-12 col-md-5 offset-md-3 ">
+            <form>
+                <div id="locationField">
+                    <input id="address-input" type="text" placeholder="Address Search">
+                    <button class="btn" id="address-submit" type="text"> Submit </button>
+                    <button class="btn" id="geolocate" type="text"> Geolocate </button>
+                </div>
+            </form>
+    </div>
+    </div>
+</div>
+    <!-- /Header Section -->
+    <!-- Buttons Map & Star Atlas, Location Search -->
+    <div class="container">
+        <div class="row">
+                <button type="button" class="btn btn-collapseButton" data-toggle="collapse" data-target="#loginCollapse" role="button" aria-expanded="true" aria-controls="loginCollapseExample" id="loginButtonCollapse">
+                            <img class="loginIcon" src="/assets/img/login.svg"> Login
+                </button>
+                <button type="button" class="btn btn-collapseButton" data-toggle="collapse" data-target="#mapCollapse" role="button" aria-expanded="true" aria-controls="mapCollapseExample" id="mapButtonCollapse">
+                            <img class="buttonIcon" src="/assets/img/world_icon.svg" width="25px" height="25px"> Light Map
+                </button>
+                <button type="button" class="btn btn-collapseButton" data-toggle="collapse" data-target="#atlasCollapse" role="button" aria-expanded="true" aria-controls="atlasCollapseExample" id="atlasButtonCollapse">
+                            <img class="buttonIcon" src="/assets/img/sky_atlas.svg"> Sky Atlas
+                </button>
+        </div>
+    </div>
+    <!-- /Buttons Map & Star Atlas, Location Search -->
+    <!-- Map & Atlas Collapse -->
+    <div class="row">
+        <div class="container">
+            <div class="col-12">
+                    <div class="collapse hide" id="loginCollapse">
+                        <div id="loginSection" style="width:100%;">
+                            <%- include partials/passport %>
+                        </div>
+                    </div>
+            </div>
+        <div class="col-12">
+            <div class="collapse hide" id="mapCollapse">
+                <div id="mapBox">
+                    <div id='map' style='width: 100%; height: 600px; position: relative;'></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="collapse hide" id="atlasCollapse">
+                        <div id="starmap1" style="width:100%;height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /Map & Atlas Collapse -->
+    <!-- Veiwing Conditions, Weather, Moon & Sun Data -->
+    <div class="container contentContainer">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="col-12 contentBox">
+                    <h2 class="contentHeader"><img class="buttonIcon" src="/assets/img/view_conditions.svg"> Weather Conditions</h2>
+                    <div class="col-12" id="viewingTimes">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                <div class="col-12 contentBox">
+                    <h2 class="contentHeader"><img class="buttonIcon" src="/assets/img/moon.svg"> Moon Phase</h2>
+                    <div class="row">
+                        <div class="col-6" id="moonPhase">
+                            <img src="http://api.usno.navy.mil/imagery/moon.png" width="100%" >
+                        </div>
+                        <div class="col-6">
+                                <div class="col-12" id="moonPhaseText"></div>
+                                <div class="col-12" id="moonPhaseDate"></div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12" id="moonPhaseText"></div>
+                        <div class="col-12" id="moonPhaseTextRise">
+                            <img id="moonPhaseImage" src="/assets/img/moon_rise.svg">
+                        </div>
+                        <div class="col-12" id="moonPhaseTextSet">
+                            <img id="moonPhaseImage" src="/assets/img/moon_set.svg">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="col-12 contentBox">
+                    <h2 class="contentHeader"><img class="buttonIcon" src="/assets/img/celestial_events.svg">Celestial Events</h2>
+                    <div class="col-12" id="celestialEvents">
+                    </div>
+                </div>
+        </div>
+    <!-- /Veiwing Conditions, Weather, Moon & Sun Data -->
+    <!-- Dark Sky Spots & Events -->
+    <div class="container contentContainer">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 contentBox">
+                <h2 class="contentHeader"><img class="buttonIcon" src="/assets/img/dark_spots.svg">
+                    Dark Sky Spots
+                    <span class="add-location" data-toggle="tooltip" title="Add a new spot" onClick="addLocation()">+</span> 
+                </h2>
+                <div class="col-sm-12 col-lg-10" id="darkSkyLocations">       
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 contentBox">
+                <h2 class="contentHeader"><img class="buttonIcon" src="/assets/img/stargazing_events.svg">
+                    Stargazing Events
+                    <span class="add-event" data-toggle="tooltip" title="Add a new event" onClick="addEvent()">+</span>  
+                </h2>
+                <div class="col-sm-12 col-lg-10" id="upcomingEvents">
+                </div>
+            </div>
+        </div>
+        <!-- /Dark Sky Spots & Events -->
+
+        <div class="modal fade" id="addLocation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content contentContainer">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Dark Sky Spot</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <form action="/locations" method="post">
+                                <label for="title">Title</label>
+                                <input type="text" class="form-control" id="title" placeholder="Spot Title">
+                                <br>
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1401 East 42nd St 90210">
+                                <br>
+                                <label for="description">Description</label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="A short description"></textarea>
+                                
+                                <input type="submit" class="btn btn-primary"></input>
+                              </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content contentContainer">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Event</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <form action="/events" method="post">
+                                <label for="title">Title</label>
+                                <input type="text" class="form-control" id="title" placeholder="Spot Title">
+                                <br>
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" id="date" placeholder="YYYY-MM-dd">
+                                <br>
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1401 East 42nd St 90210">
+                                <br>
+                                <label for="description">Description</label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="A short description"></textarea>
+                                <input type="submit" class="btn btn-primary"></input>
+                              </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <%- include ./partials/scripts %>
+</body>
+</html>

@@ -1,0 +1,195 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-78.673611,36.697222]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Staunton River State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-82.184167,35.931111]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Blue Ridge Observatory and Star Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-77.821989,41.661765]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Cherry Springs State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-81.080556,41.584722]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Geauga Observatory Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-82.361916,30.826620]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Stephen C. Foster State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-81.022852,27.561260]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Kissimmee Prairie Preserve State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [ -81.074273,25.972987]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Big Cypress National Preserve"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [ -84.782778,45.777778]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Headlands"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [ -86.993613,45.236635]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Newport State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [  -106.093176,34.259772]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Salinas Pueblo Missions National Monument"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [  -107.961667,36.060556]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Chaco Culture National Historical Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [  -109.072500,37.383611]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Hovenweep National Monument"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-110.013611,37.601389]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Natural Bridges National Monument"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-110.347222,31.837500]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Kartchner Caverns State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-110.733056,32.607778]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Oracle State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-109.538582,40.515653]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Steinaker State Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-111.509722,35.171666]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Walnut Canyon National Monument"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-114.255347,38.946874]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Great Basin National Park"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-116.825833,36.241944]
+  },
+  "properties": {
+    "name": "Dark Sky Park: Death Valley National Park"
+  }
+}
+]
+}
